@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="student.master.cs" Inherits="Learn__E.student" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="css/adminlte.min.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <script src="js/adminlte.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+
+        <div class="d-flex flex-row" style="width: 100%; height: 100%; min-height: 100vh; max-height: 100vh; overflow: hidden;">
+
+
+            <!-- Main Sidebar Container -->
+               <aside class="text-light" style="width:250px; height:100vh; background-color:#343a40">
+
+                <!-- E-Learning logo -->
+                <a href="Icons/std.png" class="brand-link">
+                    <img src="Icons/std.png" alt="Student Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                    <span class="brand-text font-weight-light">User Section</span>
+                </a>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar user panel (optional) -->
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <div class="image">
+                            <img src="Icons/student.jpg" class="img-circle elevation-2" alt="User Image">
+                        </div>
+                        <div class="info">
+                            <a href="#" class="d-block">Student Data</a>
+                        </div>
+                    </div>
+
+
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item">
+                                <a runat="server" href="~/Coursedetail.aspx" class="nav-link">
+                                    <p>Courses</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a runat="server" href="~/MyCourse.aspx" class="nav-link">
+                                    <p>MyCourses</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a runat="server" href="~/studentDetails.aspx" class="nav-link">
+                                    <p>Profile</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link"></a>
+                                <asp:Button ID="btnlogout" runat="server" Text="Logout" OnClick="btnlogout_Click" />
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /.sidebar-menu -->
+                </div>
+                <!-- /.sidebar -->
+            </aside>
+
+        <div class="container-xl overflow-auto" style="width: calc(100% - 250px)">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </div>
+
+
+
+    </form>
+</body>
+</html>
